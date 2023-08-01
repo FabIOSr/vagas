@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://manage-jobs-online/reports -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="W3N57lVSAoFhG1iEQ0Z5stqzKN36KpLaPQYUycEP">
+
+    <title>Manage Jobs Online</title>
+
+    <!-- Fonts -->
+  <link rel="dns-prefetch" href="http://fonts.bunny.net/">
+  <link href="./dist/css/css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <link rel="preload" as="style" href="./dist/css/app-71455456.css">
+  <link rel="modulepreload" href="./dist/css/js/app-24832b65.js.download">
+  <link rel="stylesheet" href="./dist/css/app-71455456.css">
+  <script type="module" src="./dist/css/js/app-24832b65.js.download"></script>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    Gerenciador de Vagas
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle"
+                                href="http://manage-jobs-online/reports#" role="button" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" v-pre="">
+                                Fábio da Silva Ramos
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="http://manage-jobs-online/logout" onclick="event.preventDefault();
+                                                     document.getElementById(&#39;logout-form&#39;).submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="http://manage-jobs-online/logout" method="POST"
+                                    class="d-none">
+                                    <input type="hidden" name="_token" value="W3N57lVSAoFhG1iEQ0Z5stqzKN36KpLaPQYUycEP">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-2 mb-2">
+                        <div class="list-group">
+                            <a href="index.html" class="list-group-item list-group-item-action "
+                                aria-current="true">
+                                Painel Home
+                            </a>
+                            <a href="cargos.html"
+                                class="list-group-item list-group-item-action">Cargos</a>
+                            <a href="departamentos.html"
+                                class="list-group-item list-group-item-action ">Departamentos</a>
+                            <a href="empresas.html"
+                                class="list-group-item list-group-item-action ">Minhas Empresas</a>
+                            <a href="nivel-experiencia.html"
+                                class="list-group-item list-group-item-action ">Nivel de experiência</a>
+                            <a href="tipo-vagas.html"
+                                class="list-group-item list-group-item-action ">Tipos de vaga </a>
+                            <a href="tipo-contrato.html"
+                                class="list-group-item list-group-item-action ">Tipo de contrato</a>
+                            <a href="vagas-solicitadas.html"
+                                class="list-group-item list-group-item-action ">Vagas Solicitadas</a>
+                            <a href="relatorios.html"
+                                class="list-group-item list-group-item-action active">Relatórios</a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+
+                        <div class="row mb-2 border-bottom pb-3 ms-1">
+                            <div class="col-md-2 ps-0">
+                                <label class="form-label mb-0">Data Inicio</label>
+                                <input type="date" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label mb-0">Data Final</label>
+                                <input type="date" class="form-control form-control-sm">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="inputState" class="form-label mb-0">Empresa</label>
+                                <select id="inputState" class="form-select form-select-sm">
+                                    <option selected="">Selecione...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputState" class="form-label mb-0">Status</label>
+                                <select id="inputState" class="form-select form-select-sm">
+                                    <option selected="">Selecione...</option>
+                                    <option>SOLICITADO</option>
+                                    <option>EM PROCESSO</option>
+                                    <option>REJEITADO</option>
+                                    <option>APROVADO</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-grid pb-0 text-end">
+                                    <button class="btn btn-primary btn-sm" style="margin-top: 22px;"
+                                        type="button">Pesquisar</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table id="table" class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Solicitante</th>
+                                        <th scope="col">Razão Social</th>
+                                        <th scope="col">Cargo</th>
+                                        <th scope="col">Nº de vagas</th>
+                                        <th scope="col">Data</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">01210</th>
+                                        <td>Manuel Gomes</td>
+                                        <td>P.A Maria Dirce</td>
+                                        <td>Analista de processos</td>
+                                        <td>03</td>
+                                        <td>15/05/2023</td>
+                                        <td class="text-info">EM PROCESSO</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">10101</th>
+                                        <td>Manuel Gomes</td>
+                                        <td>Hospital Municipal da Criança</td>
+                                        <td>Analista de Qaulidade</td>
+                                        <td>01</td>
+                                        <td>25/05/2023</td>
+                                        <td class="text-danger">REJEITADA</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script type="module">
+        $(function () {
+            let messageBox = bootstrap.Alert.getOrCreateInstance('#alert');
+            setTimeout(() => {
+                messageBox.close();
+            }, 2000);
+        });
+    </script>
+
+
+</body>
+
+</html>
