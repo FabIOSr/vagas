@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)http://manage-jobs-online/home -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Manage Jobs Online</title>
+
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="http://fonts.bunny.net/">
+  <link href="./dist/css/css" rel="stylesheet">
+
+  <!-- Scripts -->
+  <link rel="preload" as="style" href="./dist/css/app-71455456.css">
+  <link rel="modulepreload" href="./dist/css/js/app-24832b65.js.download">
+  <link rel="stylesheet" href="./dist/css/app-71455456.css">
+  <script type="module" src="./dist/css/js/app-24832b65.js.download"></script>
+</head>
+
+<body>
+  <div id="app">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          Gerenciador de Vagas
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Left Side Of Navbar -->
+          <ul class="navbar-nav me-auto">
+
+          </ul>
+
+          <!-- Right Side Of Navbar -->
+          <ul class="navbar-nav ms-auto">
+            <!-- Authentication Links -->
+            <li class="nav-item dropdown">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle" href="http://manage-jobs-online/home#"
+                role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre="">
+                Fábio da Silva Ramos
+              </a>
+
+              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="http://manage-jobs-online/logout" onclick="event.preventDefault();
+                                                     document.getElementById(&#39;logout-form&#39;).submit();">
+                  Logout
+                </a>
+
+                <form id="logout-form" action="http://manage-jobs-online/logout" method="POST" class="d-none">
+                  <input type="hidden" name="_token" value="W3N57lVSAoFhG1iEQ0Z5stqzKN36KpLaPQYUycEP">
+                </form>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="py-4">
+      <div class="container">
+        <div class="row justify-content-center g-2">
+          <div class="col-md-2 mb-2">
+            <div class="list-group">
+                <a href="index.html" class="list-group-item list-group-item-action active"
+                    aria-current="true">
+                    Painel Home
+                </a>
+                <a href="cargos.html"
+                    class="list-group-item list-group-item-action">Cargos</a>
+                <a href="departamentos.html"
+                    class="list-group-item list-group-item-action ">Departamentos</a>
+                <a href="empresas.html"
+                    class="list-group-item list-group-item-action ">Minhas Empresas</a>
+                <a href="nivel-experiencia.html"
+                    class="list-group-item list-group-item-action ">Nivel de experiência</a>
+                <a href="tipo-vagas.html"
+                    class="list-group-item list-group-item-action ">Tipos de vaga </a>
+                <a href="tipo-contrato.html"
+                    class="list-group-item list-group-item-action ">Tipo de contrato</a>
+                <a href="vagas-solicitadas.html"
+                    class="list-group-item list-group-item-action ">Vagas Solicitadas</a>
+                <a href="relatorios.html"
+                    class="list-group-item list-group-item-action ">Relatórios</a>
+            </div>
+        </div>
+          <div class="col-md-10">
+            <div class="row mb-2">
+              <div class="col-md-6 mb-2">
+                <div class="card">
+                  <div class="card-header pb-0">
+                    <h4 class="card-title">Demanda por Cargos</h4>
+                  </div>
+                  <table class="table card-table table-vcenter">
+                    <thead>
+                      <tr>
+                        <th>Cargos</th>
+                        <th colspan="2">Solicitações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Ass. Administrativo</td>
+                        <td>15</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 15.0%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Téc. de Enfermagem</td>
+                        <td>79</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 79.0%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Manutenção</td>
+                        <td>1</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 1.9%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Enfermeiro</td>
+                        <td>9</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 9.0%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-header pb-0">
+                    <h4 class="card-title pb-0">Demanda por Empresa</h4>
+                  </div>
+                  <table class="table card-table table-vcenter">
+                    <thead>
+                      <tr>
+                        <th>Empresa</th>
+                        <th colspan="2">Solicitações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Maria Dirce</td>
+                        <td>15</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 15.0%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>UPA Cumbica</td>
+                        <td>39</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 39.96%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>UPA São João</td>
+                        <td>45</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 45.9%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>HMCA</td>
+                        <td>99</td>
+                        <td class="w-50">
+                          <div class="progress progress-xs">
+                            <div class="progress-bar bg-primary" style="width: 99.72%"></div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="card">
+                  <div class="card-header bg-body">Painel Home</div>
+
+                  <div class="card-body">
+
+                    You are logged in!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+</body>
+
+</html>

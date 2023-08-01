@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039) -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="W3N57lVSAoFhG1iEQ0Z5stqzKN36KpLaPQYUycEP">
+
+    <title>Manage Jobs Online</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="http://fonts.bunny.net/">
+    <link href="./dist/css/css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <link rel="preload" as="style" href="./dist/css/app-71455456.css">
+    <link rel="modulepreload" href="./dist/js/app-24832b65.js.download">
+    <link rel="stylesheet" href="./dist/css/app-71455456.css">
+    <link href="./dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/simple-datatables.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    Gerenciador de Vagas
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle"
+                                href="#" role="button" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" v-pre="">
+                                Fábio da Silva Ramos
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="./login">
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-2 mb-2">
+                        <div class="list-group">
+                            <a href="./index.html" class="list-group-item list-group-item-action "
+                                aria-current="true">
+                                Painel Home
+                            </a>
+                            <a href="./cargos.html"
+                                class="list-group-item list-group-item-action">Cargos</a>
+                            <a href="./departamentos.html"
+                                class="list-group-item list-group-item-action ">Departamentos</a>
+                            <a href="./empresas.html"
+                                class="list-group-item list-group-item-action ">Minhas Empresas</a>
+                            <a href="./nivel-experiencia.html"
+                                class="list-group-item list-group-item-action ">Nivel de experiência</a>
+                            <a href="./tipo-vagas.html"
+                                class="list-group-item list-group-item-action ">Tipos de vaga </a>
+                            <a href="./tipo-contrato.html"
+                                class="list-group-item list-group-item-action ">Tipo de contrato</a>
+                            <a href="./vagas-solicitadas.html"
+                                class="list-group-item list-group-item-action active">Vagas Solicitadas</a>
+                            <a href="./relatorios.html"
+                                class="list-group-item list-group-item-action ">Relatórios</a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+
+                        <div class="row mb-2 border-bottom pb-3">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+
+                            </div>
+                            <div class="col-md-3 text-end">
+                                <a href="#"
+                                    class="btn btn-sm btn-secondary">Solicitar vaga +</a>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <div
+                                class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+                                <div class="dataTable-top">
+                                    <div class="dataTable-dropdown"><select class="dataTable-selector form-select">
+                                            <option value="5">5</option>
+                                            <option value="10" selected="">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                        </select><label> entries per page</label></div>
+                                    <div class="dataTable-search"><input class="dataTable-input" placeholder="Search..."
+                                            type="text"></div>
+                                </div>
+                                <div class="dataTable-container">
+                                    <table class="table table-sm dataTable-table" id="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" data-sortable="" style="width: 2.15983%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">#</a></th>
+                                                <th scope="col" data-sortable="" style="width: 15.6587%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">Solicitante</a></th>
+                                                <th scope="col" data-sortable="" style="width: 23.9741%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">Razão Social</a></th>
+                                                <th scope="col" data-sortable="" style="width: 7.12743%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">Vaga</a></th>
+                                                <th scope="col" data-sortable="" style="width: 9.82721%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">Contrato</a></th>
+                                                <th scope="col" data-sortable="" style="width: 19.4384%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">Cargo / Qtd</a></th>
+                                                <th scope="col" data-sortable="" style="width: 13.1749%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">Status</a></th>
+                                                <th scope="col" width="80" data-sortable="" style="width: 8.63931%;"><a
+                                                        href="#"
+                                                        class="dataTable-sorter">Açoes</a></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>
+                                                    Manuel Gomes <br>
+                                                    <small class="text-muted">Enfermeiro</small>
+                                                </td>
+                                                <td>
+                                                    P.A Maria Dirce <br>
+                                                    <small class="text-muted">16165611165</small>
+                                                </td>
+                                                <td>Integral</td>
+                                                <td>Temporário</td>
+                                                <td>
+                                                    Téc. Enfermagem - <small>02</small>
+                                                </td>
+                                                <td class="text-secondary">SOLICITADO</td>
+                                                <td>
+                                                    <a href="#" type="button"
+                                                        class="btn btn-success btn-sm py-0" data-bs-toggle="modal"
+                                                        data-bs-target="#modalInfo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                            fill="currentColor" class="bi bi-list-columns-reverse"
+                                                            viewBox="0 0 12 12">
+                                                            <path fill-rule="evenodd"
+                                                                d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5Zm-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Z">
+                                                            </path>
+                                                        </svg>
+                                                    </a>
+
+                                                    <a href="#"
+                                                        class="btn btn-sm btn-primary py-0 px-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                            fill="currentColor" class="bi bi-pencil-square"
+                                                            viewBox="0 0 12 12">
+                                                            <path
+                                                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
+                                                            </path>
+                                                            <path fill-rule="evenodd"
+                                                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
+                                                            </path>
+                                                        </svg>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>
+                                                    João das Neves <br>
+                                                    <small class="text-muted">Coord. Administrativo</small>
+                                                </td>
+                                                <td>
+                                                    Hospital Municipal da Criança <br>
+                                                    <small class="text-muted">46319000002012</small>
+                                                </td>
+                                                <td>Integral</td>
+                                                <td>Efetivo</td>
+                                                <td>
+                                                    Ass. Administrativo - <small>05</small>
+                                                </td>
+                                                <td class="text-secondary">EM PROCESSO</td>
+                                                <td>
+                                                    <a href="#" type="button"
+                                                        class="btn btn-success btn-sm py-0" data-bs-toggle="modal"
+                                                        data-bs-target="#modalInfo">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                            fill="currentColor" class="bi bi-list-columns-reverse"
+                                                            viewBox="0 0 12 12">
+                                                            <path fill-rule="evenodd"
+                                                                d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5Zm-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Z">
+                                                            </path>
+                                                        </svg>
+                                                    </a>
+
+                                                    <a href="#"
+                                                        class="btn btn-sm btn-primary py-0 px-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                                            fill="currentColor" class="bi bi-pencil-square"
+                                                            viewBox="0 0 12 12">
+                                                            <path
+                                                                d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
+                                                            </path>
+                                                            <path fill-rule="evenodd"
+                                                                d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
+                                                            </path>
+                                                        </svg>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="dataTable-bottom">
+                                    <div class="dataTable-info">Showing 1 to 2 of 2 entries</div>
+                                    <nav class="dataTable-pagination">
+                                        <ul class="dataTable-pagination-list pagination pagination-primary"></ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold poppins" id="exampleModalLabel">Detalhes vaga solicitada
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <table width="100%" class="mb-4">
+                                <tbody>
+                                    <tr>
+                                        <td class="ms-5 fw-bold" width="33%">SOLICITANTE: &nbsp;</td>
+                                        <td class="" width="33%"></td>
+                                        <td class="text-end fw-bold">Data Solicitação</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ms-5 text-primary">João das Neves: &nbsp;</td>
+                                        <td class=""></td>
+                                        <td class="text-end text-secondary"> 01/08/2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                            <table width="100%">
+                                <tbody>
+                                    <tr class="border-bottom">
+                                        <td class="ms-5 fw-bold">Razão Social: &nbsp;</td>
+                                        <td class=""> Hospital Municipal da Criança e Adolescente</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="ms-5 fw-bold">Nº de Vaga: &nbsp;</td>
+                                        <td class=""> 01</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="ms-5 fw-bold">Cargo: &nbsp;</td>
+                                        <td class=""> Assistente Administrativo</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="ms-5 fw-bold" width="125">Departamento: &nbsp;</td>
+                                        <td class=""> Administração</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="ms-5 fw-bold">Tipo de Vaga: &nbsp;</td>
+                                        <td class=""> Integral</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="ms-5 fw-bold">Tipo de Contrato: &nbsp;</td>
+                                        <td class=""> Efetivo</td>
+                                    </tr>
+                                    <tr class="border-bottom">
+                                        <td class="ms-5 fw-bold">Status: &nbsp;</td>
+                                        <td class="text-primary"> SOLICITADO</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ms-5 fw-bold">Obs Solicitante:</td>
+                                        <td class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid
+                                            eligendi aperiam eveniet earum nihil? Nam aliquid tempora pariatur, commodi
+                                            obcaecati quos natus exercitationem facere quis?</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Aprovar
+                                Direto</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="./dist/js/simple-datatables.js.download"></script>
+    <script src="./dist/js/simple-datatables.js(1).download"></script>
+</body>
+
+</html>

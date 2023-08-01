@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://manage-jobs-online/companies -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="W3N57lVSAoFhG1iEQ0Z5stqzKN36KpLaPQYUycEP">
+
+    <title>Manage Jobs Online</title>
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="http://fonts.bunny.net/">
+    <link href="./minhas empresas_files/css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <link rel="preload" as="style" href="./dist/css/app-71455456.css">
+    <link rel="modulepreload" href="./dist/css/js/app-24832b65.js.download">
+    <link rel="stylesheet" href="./dist/css/app-71455456.css">
+    <script type="module" src="./dist/css/js/app-24832b65.js.download"></script>
+    <link href="./dist/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/css/simple-datatables.css">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    Gerenciador de Vagas
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="navbar-nav me-auto">
+
+                    </ul>
+
+                    <!-- Right Side Of Navbar -->
+                    <ul class="navbar-nav ms-auto">
+                        <!-- Authentication Links -->
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle"
+                                href="http://manage-jobs-online/companies#" role="button" data-bs-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false" v-pre="">
+                                Fábio da Silva Ramos
+                            </a>
+
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="http://manage-jobs-online/logout" onclick="event.preventDefault();
+                                                     document.getElementById(&#39;logout-form&#39;).submit();">
+                                    Logout
+                                </a>
+
+                                <form id="logout-form" action="http://manage-jobs-online/logout" method="POST"
+                                    class="d-none">
+                                    <input type="hidden" name="_token" value="W3N57lVSAoFhG1iEQ0Z5stqzKN36KpLaPQYUycEP">
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-2 mb-2">
+                        <div class="list-group">
+                            <a href="index.html" class="list-group-item list-group-item-action "
+                                aria-current="true">
+                                Painel Home
+                            </a>
+                            <a href="cargos.html"
+                                class="list-group-item list-group-item-action">Cargos</a>
+                            <a href="departamentos.html"
+                                class="list-group-item list-group-item-action ">Departamentos</a>
+                            <a href="empresas.html"
+                                class="list-group-item list-group-item-action active">Minhas Empresas</a>
+                            <a href="nivel-experiencia.html"
+                                class="list-group-item list-group-item-action ">Nivel de experiência</a>
+                            <a href="tipo-vagas.html"
+                                class="list-group-item list-group-item-action ">Tipos de vaga </a>
+                            <a href="tipo-contrato.html"
+                                class="list-group-item list-group-item-action ">Tipo de contrato</a>
+                            <a href="vagas-solicitadas.html"
+                                class="list-group-item list-group-item-action ">Vagas Solicitadas</a>
+                            <a href="relatorios.html"
+                                class="list-group-item list-group-item-action ">Relatórios</a>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+
+                        <div class="row mb-2 border-bottom pb-3">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+
+                            </div>
+                            <div class="col-md-3 text-end">
+                                <a href="http://manage-jobs-online/companies#" class="btn btn-sm btn-secondary"
+                                    data-bs-toggle="modal" data-bs-target="#addCompany">Registrar nova empresa +</a>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <div
+                                class="dataTable-wrapper dataTable-loading no-footer sortable searchable fixed-columns">
+                                <div class="dataTable-top">
+                                    <div class="dataTable-dropdown"><select class="dataTable-selector form-select">
+                                            <option value="5">5</option>
+                                            <option value="10" selected="">10</option>
+                                            <option value="15">15</option>
+                                            <option value="20">20</option>
+                                            <option value="25">25</option>
+                                        </select><label> entries per page</label></div>
+                                    <div class="dataTable-search"><input class="dataTable-input" placeholder="Search..."
+                                            type="text"></div>
+                                </div>
+                                <div class="dataTable-container">
+                                    <table id="table" class="table table-sm dataTable-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" data-sortable="" style="width: 3.67171%;"><a
+                                                        href="http://manage-jobs-online/companies#"
+                                                        class="dataTable-sorter">#</a></th>
+                                                <th scope="col" data-sortable="" style="width: 25.7019%;"><a
+                                                        href="http://manage-jobs-online/companies#"
+                                                        class="dataTable-sorter">CNPJ</a></th>
+                                                <th scope="col" data-sortable="" style="width: 39.6328%;"><a
+                                                        href="http://manage-jobs-online/companies#"
+                                                        class="dataTable-sorter">Razão Social</a></th>
+                                                <th scope="col" data-sortable="" style="width: 20.7343%;"><a
+                                                        href="http://manage-jobs-online/companies#"
+                                                        class="dataTable-sorter">Nº Solicitações</a></th>
+                                                <th scope="col" data-sortable="" style="width: 10.2592%;"><a
+                                                        href="http://manage-jobs-online/companies#"
+                                                        class="dataTable-sorter">Status</a></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>62779145001161</td>
+                                                <td>P.A Maria Dirce</td>
+                                                <td>3</td>
+                                                <td class="text-secondary">ATIVO</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>46319000002012</td>
+                                                <td>Hospital Municipal da Criança</td>
+                                                <td>15</td>
+                                                <td class="text-secondary">ATIVO</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="dataTable-bottom">
+                                    <div class="dataTable-info">Showing 1 to 2 of 2 entries</div>
+                                    <nav class="dataTable-pagination">
+                                        <ul class="dataTable-pagination-list pagination pagination-primary"></ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="addCompany" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title fw-bold poppins" id="exampleModalLabel">Formulario de cadastro nova
+                                empresa
+                            </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <form name="company" autocomplete="off">
+                            <div class="modal-body">
+                                <div class="row g-2">
+                                    <div class="col-md-4">
+                                        <label for="document" class="form-labelmb-0">CNPJ</label>
+                                        <input name="document" type="text" class="document form-control form-control-sm"
+                                            id="document">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <label for="social_name" class="form-label mb-0">Razão Social</label>
+                                        <input name="social_name" type="text" class="form-control form-control-sm"
+                                            id="social_name">
+                                    </div>
+                                    <div class="col-10">
+                                        <label for="alias_name" class="form-label mb-0">Nome Fantasia</label>
+                                        <input name="alias_name" type="text" class="form-control form-control-sm"
+                                            id="alias_name">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="zipcode" class="form-label mb-0">Cep</label>
+                                        <input name="zipcode" type="text" class="form-control form-control-sm"
+                                            id="zipcode">
+                                    </div>
+                                    <div class="col-10">
+                                        <label for="street" class="form-label mb-0">Endereço</label>
+                                        <input name="street" type="text" class="form-control form-control-sm"
+                                            id="street" placeholder="1234 Main St">
+                                    </div>
+                                    <div class="col-2">
+                                        <label for="number" class="form-label mb-0">Número</label>
+                                        <input name="number" type="text" class="form-control form-control-sm"
+                                            id="number">
+                                    </div>
+                                    <div class="col-10">
+                                        <label for="complement" class="form-label mb-0">Cmplemento</label>
+                                        <input name="complement" type="text" class="form-control form-control-sm"
+                                            id="complement" placeholder="Apartment, studio, or floor">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="neighborhood" class="form-label mb-0">Bairro</label>
+                                        <input name="neighborhood" type="text" class="form-control form-control-sm"
+                                            id="neighborhood">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="city" class="form-label mb-0">Cidade</label>
+                                        <input name="city" type="text" class="form-control form-control-sm" id="city">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label for="state" class="form-label mb-0">Estado</label>
+                                        <input name="state" type="text" class="form-control form-control-sm" id="state">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="email" class="form-label mb-0">E-mail responsável</label>
+                                        <input type="email" class="form-control form-control-sm" id="email">
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                                            <label class="form-check-label" for="gridCheck">
+                                                Estou ciente que as informações acima são veridicas.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-sm btn-secondary"
+                                    data-bs-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-sm btn-primary">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./minhas empresas_files/simple-datatables.js.download"></script>
+    <script src="./minhas empresas_files/simple-datatables.js(1).download"></script>
+    <script type="module">
+        $(function () {
+            let messageBox = bootstrap.Alert.getOrCreateInstance('#alert');
+            setTimeout(() => {
+                messageBox.close();
+            }, 2000);
+
+            function validarCNPJ(cnpj) {
+
+                cnpj = cnpj.replace(/[^\d]+/g, '');
+                console.log(cnpj);
+
+                if (cnpj == '') return false;
+
+                if (cnpj.length != 14)
+                    return false;
+
+                // Elimina CNPJs invalidos conhecidos
+                if (cnpj == "00000000000000" ||
+                    cnpj == "11111111111111" ||
+                    cnpj == "22222222222222" ||
+                    cnpj == "33333333333333" ||
+                    cnpj == "44444444444444" ||
+                    cnpj == "55555555555555" ||
+                    cnpj == "66666666666666" ||
+                    cnpj == "77777777777777" ||
+                    cnpj == "88888888888888" ||
+                    cnpj == "99999999999999")
+                    return false;
+
+                // Valida DVs
+                let tamanho = cnpj.length - 2
+                let numeros = cnpj.substring(0, tamanho);
+                let digitos = cnpj.substring(tamanho);
+                let soma = 0;
+                let pos = tamanho - 7;
+                for (let i = tamanho; i >= 1; i--) {
+                    soma += numeros.charAt(tamanho - i) * pos--;
+                    if (pos < 2)
+                        pos = 9;
+                }
+                let resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+                if (resultado != digitos.charAt(0))
+                    return false;
+
+                tamanho = tamanho + 1;
+                numeros = cnpj.substring(0, tamanho);
+                soma = 0;
+                pos = tamanho - 7;
+                for (let i = tamanho; i >= 1; i--) {
+                    soma += numeros.charAt(tamanho - i) * pos--;
+                    if (pos < 2)
+                        pos = 9;
+                }
+                resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+                if (resultado != digitos.charAt(1))
+                    return false;
+
+                return true;
+
+            };
+
+            $('.document').blur(function () {
+
+                //let cnpj = $(this).val().replace(/[^0-9]+/g,'');
+
+                if (validarCNPJ($(this).val())) {
+                    $("input[name='social_name']").val('');
+                    $("input[name='alias_name']").val('');
+                    $("input[name='zipcode']").val('');
+                    $("input[name='street']").val('');
+                    $("input[name='complement']").val('');
+                    $("input[name='state']").val('');
+                    $("input[name='number']").val('');
+                    $("input[name='city']").val('');
+                    $("input[name='neighborhood']").val('');
+
+                    $.getJSON("https://api-publica.speedio.com.br/buscarcnpj?cnpj=" + $('.document').val(), function (data) {
+
+                        if (!("erro" in data)) {
+                            $("input[name='social_name']").val(data["RAZAO SOCIAL"]);
+                            $("input[name='alias_name']").val(data["NOME FANTASIA"]);
+                            $("input[name='zipcode']").val(data.CEP);
+                            $("input[name='street']").val(data["TIPO LOGRADOURO"] + ' ' + data.LOGRADOURO);
+                            $("input[name='complement']").val(data.COMPLEMENTO);
+                            $("input[name='number']").val(data.NUMERO);
+                            $("input[name='neighborhood']").val(data.BAIRRO);
+                            $("input[name='city']").val(data.MUNICIPIO);
+                            $("input[name='state']").val(data.UF);
+                        } else {
+                            alert("CNPJ não encontrado.");
+                            $("input[name='social_name']").val('');
+                            $("input[name='alias_name']").val('');
+                            $("input[name='zipcode']").val('');
+                            $("input[name='street']").val('');
+                            $("input[name='complement']").val('');
+                            $("input[name='state']").val('');
+                            $("input[name='number']").val('');
+                            $("input[name='city']").val('');
+                            $("input[name='neighborhood']").val('');
+                        }
+                    });
+
+                } else {
+                    alert('formato invalido');
+                    $("input[name='social_name']").val('');
+                    $("input[name='alias_name']").val('');
+                    $("input[name='zipcode']").val('');
+                    $("input[name='street']").val('');
+                    $("input[name='complement']").val('');
+                    $("input[name='state']").val('');
+                    $("input[name='number']").val('');
+                    $("input[name='city']").val('');
+                    $("input[name='neighborhood']").val('');
+                }
+            });
+
+            $('form[name="company"]').on('submit', function (e) {
+                e.preventDefault();
+                console.log($(this).serializeArray())
+            })
+
+
+            function pesquisacep(valor) {
+                //Nova variável "cep" somente com dígitos.
+                var cep = valor.replace(/\D/g, '');
+
+                //Verifica se campo cep possui valor informado.
+                if (cep != "") {
+
+                    //Expressão regular para validar o CEP.
+                    var validacep = /^[0-9]{8}$/;
+
+                    //Valida o formato do CEP.
+                    if (validacep.test(cep)) {
+
+                        //Preenche os campos com "..." enquanto consulta webservice.
+                        document.getElementById('rua').value = "...";
+                        document.getElementById('bairro').value = "...";
+                        document.getElementById('cidade').value = "...";
+                        document.getElementById('uf').value = "...";
+                        document.getElementById('ibge').value = "...";
+
+                        //Cria um elemento javascript.
+                        var script = document.createElement('script');
+
+                        //Sincroniza com o callback.
+                        script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+
+                        //Insere script no documento e carrega o conteúdo.
+                        document.body.appendChild(script);
+
+                    } //end if.
+                    else {
+                        //cep é inválido.
+                        limpa_formulário_cep();
+                        alert("Formato de CEP inválido.");
+                    }
+                } //end if.
+                else {
+                    //cep sem valor, limpa formulário.
+                    limpa_formulário_cep();
+                }
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
